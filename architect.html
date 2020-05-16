@@ -15,13 +15,13 @@
         }
 
         .rootLayout {
-            display: none;
+            display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             margin: 0px;
             padding: 0px;
             height: 100vh;
             gap: 1em;
-            position: fixed;
+            /*position: fixed;*/
 
         }
 
@@ -116,6 +116,10 @@
         .landingContent span {
             color: white;
         }
+        .sticky {
+  position: fixed;
+  top: 0;
+}
     </style>
 </head>
 
@@ -128,7 +132,7 @@
         </div>
 
     </div>
-    <div class="rootLayout">
+    <div class="rootLayout" id='myLayout'>
         <div class="image">
             <img class='changeMe'>
 
@@ -161,44 +165,51 @@
 
         window.addEventListener('scroll', amScrolling)
         var imageUrl = '';
-        var scrollPercentage = 0
+        var scrollPercentage = 0;
+        var rootLayoutInitialPosition = document.querySelector('.rootLayout').getBoundingClientRect().y;
+
+        console.log(rootLayoutInitialPosition);
+
         function amScrolling() {
             scrollPercentage = ((window.scrollY / window.innerHeight) / 2) * 100
 
-           var rootLayoutPosition = document.querySelector('.rootLayout').getBoundingClientRect();
-           console.log(rootLayoutPosition);
+           var rootLayoutCurrentPosition = document.querySelector('.rootLayout').getBoundingClientRect();
+           console.log(rootLayoutCurrentPosition);
+          // console.log(rootLayoutInitialPosition);
+           
 
+          console.log(window.scrollY/rootLayoutInitialPosition);
+           if(rootLayoutInitialPosition < window.scrollY ){
+                   document.getElementById('myLayout').classList.add("sticky");
+                   
+           }else{
+            document.getElementById('myLayout').classList.remove("sticky");
+                
+           }
 
             if (scrollPercentage <= 5) {
 
-                document.querySelector('.header').style.setProperty('display', 'block');
+              //  document.querySelector('.header').style.setProperty('display', 'block');
 
-                document.querySelector('.rootLayout').style.setProperty('display', 'none');
+              //  document.querySelector('.rootLayout').style.setProperty('display', 'none');
                 document.querySelector('.header').style.setProperty('opacity', '1');
              
 
             } else
                 if (scrollPercentage <= 10) {
-                    document.querySelector('.rootLayout').style.setProperty('display', 'grid');
-                    //document.querySelector('.header').style.setProperty('display','block');
-                    document.querySelector('.header').style.setProperty('opacity', '0.4')
-
-                    document.querySelector('.header').style.setProperty('display', 'none');
+                 document.querySelector('.rootLayout').style.setProperty('display', 'grid');
 
                 } else
                     if (scrollPercentage <= 15) {
-                        console.log('10');
                         imageUrl = 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
                         document.querySelector('.changeMe').setAttribute('src', imageUrl);
                     } else
                         if (scrollPercentage <= 35) {
                             imageUrl = 'https://images.unsplash.com/photo-1543503103-f94a0036ed9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
-                            console.log('20');
                             document.querySelector('.changeMe').setAttribute('src', imageUrl);
                         } else
                             if (scrollPercentage <= 55) {
                                 imageUrl = 'https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
-                                console.log('30');
                                 document.querySelector('.changeMe').setAttribute('src', imageUrl);
                                
                               
