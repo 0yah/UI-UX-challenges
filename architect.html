@@ -95,7 +95,7 @@
 
         .header {
 
-            background: url('https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&auto=format&fit=crop&w=995&q=80');
+            background: url('https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80');
             height: 100vh;
 
             background-attachment: fixed;
@@ -124,17 +124,18 @@
 </head>
 
 <body>
-
+    
+  
     <div class='header'>
         <div class="landingContent">
 
-            <span>Interior Design</span>
+            <span>Kenya</span>
         </div>
 
     </div>
     <div class="rootLayout" id='myLayout'>
         <div class="image">
-            <img class='changeMe'>
+            <img class='changeMe' src="https://images.unsplash.com/photo-1548615670-65a2d5c9e53a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
 
         </div>
         <div class="content-1">
@@ -159,9 +160,6 @@
 
         console.log(document.body.scrollHeight / window.innerHeight);
 
-        var contentone = [
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices convallis accumsan. Phasellus mattis dui fermentum, varius quam ac, tincidunt eros. Suspendisse sit amet lectus in leo elementum suscipit eu feugiat lectus. Praesent non porttitor elit. Etiam id ex tristique, laoreet neque et, ornare metus. Donec ac venenatis mi. Sed et augue eget dui finibus aliquet sit amet eget arcu.'
-        ]
 
         window.addEventListener('scroll', amScrolling)
         var imageUrl = '';
@@ -171,14 +169,13 @@
         console.log(rootLayoutInitialPosition);
 
         function amScrolling() {
-            scrollPercentage = ((window.scrollY / window.innerHeight) / 2) * 100
+           // scrollPercentage = ((window.scrollY / window.innerHeight) / 2) * 100
 
            var rootLayoutCurrentPosition = document.querySelector('.rootLayout').getBoundingClientRect();
-           console.log(rootLayoutCurrentPosition);
+           //console.log(rootLayoutCurrentPosition);
           // console.log(rootLayoutInitialPosition);
            
 
-          console.log(window.scrollY/rootLayoutInitialPosition);
            if(rootLayoutInitialPosition < window.scrollY ){
                    document.getElementById('myLayout').classList.add("sticky");
                    
@@ -187,34 +184,32 @@
                 
            }
 
-            if (scrollPercentage <= 5) {
+           document.querySelector('#myLayout').style.setProperty('opacity', window.scrollY/rootLayoutInitialPosition);
+           var ni = window.scrollY/rootLayoutInitialPosition;
+           if(ni>1){
 
-              //  document.querySelector('.header').style.setProperty('display', 'block');
+            //console.log(Math.abs(window.scrollY/rootLayoutInitialPosition));
+            var t = Math.abs(window.scrollY/rootLayoutInitialPosition);
+            var scrollPercentage = (Math.abs(window.scrollY/rootLayoutInitialPosition) - Math.floor(t))*100;
+           }
 
-              //  document.querySelector('.rootLayout').style.setProperty('display', 'none');
-                document.querySelector('.header').style.setProperty('opacity', '1');
+
+            if (scrollPercentage <= 20) {
+
+                imageUrl = 'https://images.unsplash.com/photo-1548615670-65a2d5c9e53a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80';
+                        document.querySelector('.changeMe').setAttribute('src', imageUrl);
              
 
             } else
-                if (scrollPercentage <= 10) {
-                 document.querySelector('.rootLayout').style.setProperty('display', 'grid');
+                if (scrollPercentage <= 40) {
+                    imageUrl = 'https://images.unsplash.com/photo-1526319238109-524eecb9b913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1010&q=80';
+                        document.querySelector('.changeMe').setAttribute('src', imageUrl);
 
                 } else
-                    if (scrollPercentage <= 15) {
-                        imageUrl = 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
+                    if (scrollPercentage <= 60) {
+                        imageUrl = 'https://images.unsplash.com/photo-1554490754-c1f912ac1b77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80';
                         document.querySelector('.changeMe').setAttribute('src', imageUrl);
-                    } else
-                        if (scrollPercentage <= 35) {
-                            imageUrl = 'https://images.unsplash.com/photo-1543503103-f94a0036ed9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
-                            document.querySelector('.changeMe').setAttribute('src', imageUrl);
-                        } else
-                            if (scrollPercentage <= 55) {
-                                imageUrl = 'https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
-                                document.querySelector('.changeMe').setAttribute('src', imageUrl);
-                               
-                              
-
-                            } else {
+                    }  else {
 
 
                             }
