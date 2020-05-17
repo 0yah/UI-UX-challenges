@@ -7,18 +7,12 @@
 
     <style>
         body{
-            margin: 0;
         }
         .myLayout{
 
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-auto-rows: min-content(100px,auto);
+            position: relative;
            
-            margin: 0px;
 
-            height: 100vh;
-            width: 100vw;
         }
 
         .card{
@@ -34,7 +28,6 @@
             background-color: rgba(255, 0, 0, 1);
             position: absolute;
             top:0px;
-            height: 100vh;
         }
 
         .card-2{
@@ -64,17 +57,6 @@
         .card-3:hover{
             z-index: 1;
         }
-        .primaryContent{
-            grid-row: 1/3;
-            grid-column: 1/3;
-            background-color: rgba(5,5,5,0.3);
-        }
-        .secondaryContent{
-            position: relative;
-            grid-column: 3;
-            grid-row: 1/3;
-            background-color: rgba(10,100,250,0.3);
-        }
 
 
         @keyframes myanimation {
@@ -98,14 +80,11 @@
 </head>
 <body>
     <div class="myLayout">
-        <div class="primaryContent">
-dssd
-        </div>
-        <div class="secondaryContent">
+       
             <div class="card card-1">One</div>
             <div class="card card-2">Two</div>
             <div class="card card-3">Three</div>
-        </div>
+        
 
     </div>
     

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        body{
+            background-color: rgba(0,0,0,0.2);
+        }
+        .box{
+
+
+            background-color: rgba(255,255,255,1);
+            height: 200px;
+            width: 200px;
+            position: relative;
+            animation: myanimation 4s alternate forwards ;
+        }
+
+        @keyframes inner {
+            0%{
+                border: 5px #ccc solid;
+            }
+            10%{
+                border: 5px rgba(0, 0, 0, 0.1) solid;
+                border-radius: 20%;
+                background-image: linear-gradient(rgba(0,0,0,0.1), yellow);
+            }
+            20%{
+                border: 5px rgba(84, 0, 0, 0.2) solid;
+                background-image: linear-gradient(red, yellow);
+                border-radius: 50%;
+            }
+            30%{
+                border: 5px rgba(168, 84, 0, 0.3) solid;
+                background-image: linear-gradient(red, yellow);
+                border-radius: 45%;
+            }
+            40%{
+                border: 5px rgba(254, 168, 0, 0.4) solid;
+                background-image: linear-gradient(red, yellow);
+                border-radius: 40%;
+            }
+            50%{
+                border: 5px rgba(0, 254, 0, 0.5) solid;
+                border-radius: 35%;
+                background-image: linear-gradient(red, yellow);
+            }
+            60%{
+                border: 5px rgba(0, 0, 84, 0.6) solid;
+                border-radius: 30%;
+            }
+            70%{
+                border: 5px rgba(0, 0, 168, 84.7) solid;
+                border-radius: 25%;
+            }
+            80%{
+                border: 5px rgba(0, 0, 254, 168.8) solid;
+                border-radius: 20%;
+            }
+            90%{
+                border: 5px rgba(0, 0, 0, 254.9) solid;
+                border-radius: 10%;
+            }
+            100%{
+                border: 5px #ccc solid;
+                border-radius: 5%;
+            }
+        }
+        @keyframes myanimation {
+            0%{
+                background-color: rgba(255,255,255,1);
+                left: 0px;
+                top:0px;
+                border-radius: 0;
+
+            }
+            25%{
+                background-color: rgba(255,0,0,1);
+                left: 300px;
+                top:0px;
+                border-radius: 25%;
+            }
+            50%{
+                background-color: rgba(0,255,0,1);
+                left: 300px;
+                top:100px;
+                border-radius: 50%;
+            }
+            75%{
+                background-color: rgba(0,0,255,1);
+
+                top: 100px;
+                left: 0px;
+                border-radius: 25%;
+            }
+            100%{
+                left: 0px;
+                top:0px;
+                background-color: rgba(255,255,255,1);
+                border-radius: 0;
+                border: 5px #ccc solid;
+            }
+        }
+
+        .round{
+            background-color: yellow;
+            padding: 5px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top:20%;
+            left: 20%;
+            border: 5px #ccc solid;
+            animation: inner 5s infinite ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+            <div class="round">
+
+            </div>
+    </div>
+    
+</body>
+</html>
