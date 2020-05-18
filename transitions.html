@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Transitions</title>
     <style>
-        
+
+body{
+    background: radial-gradient(rgba(255,0,0,0.9),rgb(255, 255, 0,0.7));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.box{
+    background: radial-gradient(rgba(25,255,0,1),rgba(211,233,42,1));
+    height: 100px;
+    position: relative;
+    top:50px;
+    width: 100px;
+    border-radius: 50%;
+    transition-property: background,border-radius;
+    transition-duration: 3s ,5s;
+}
+
+.box:hover{
+    background: rgba(25,255,0,1);
+    border-radius: 5px;
+    transform: rotateY(180deg);
+
+}
     </style>
 </head>
 <body>
-    
+    <div class="box">
+
+    </div>
 </body>
 </html>

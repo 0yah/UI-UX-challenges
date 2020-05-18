@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgba(50, 50, 50, 1);
+            height: 300vh;
+        position: relative;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .mainLayout {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            margin: 0px;
+
+        }
+
+        .mySubscriptions {
+            background-color: rgba(40, 40, 40, 1);
+            height: 100vh;
+            grid-column: 1;
+            position: fixed;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr;   
+            margin: 0px; 
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+          
+        }
+
+        .mySubscriptions::-webkit-scrollbar{
+            /*Hides the scrollbar*/
+            display: none;
+        }
+
+        .videos{
+            height: 200px;
+            width: 290px;
+            border-radius: 5px;
+            background-color: rgba(10, 10, 10, 1);
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+
+        .videos:hover{
+            background-color: rgba(50, 50, 50, 1);
+            box-shadow: 1px 1px rgba(100, 100, 100, 1);
+            border-style: inset;
+            border-radius: 2px;
+            border: 2px rgba(100, 100, 100, 1) solid;
+        }
+
+        .channelContents{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            gap: 0.2em;
+            position: absolute;
+            top: 0;
+        }
+
+        .myContent{
+            position: absolute;
+            padding: 30px;
+            grid-column: 2;
+            left: 20pc;
+
+        }
+
+        .channels{
+            width: 20pc;
+            height: 4pc;
+            background-color: rgba(20, 20, 20, 1);
+            border-radius: 3px;
+            margin: 10px 5px 10px 0px;
+            transition-property: background-color;
+            transition-duration: 2s;
+            
+           
+        }
+
+        .channels:hover{
+            background-color: rgba(40, 40, 40, 1);
+            border: 1px rgba(100, 100, 100, 1) solid;
+            border-radius: 3px;
+            border-style: inset;
+
+           
+        }
+        .navigation{
+            width: 100vw;
+            height: 50px;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navigation">
+
+    </div>
+    <div class="mainLayout">
+        <div class="mySubscriptions">
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            
+            <div class="channels"></div>
+            <div class="channels"></div>
+            
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+            <div class="channels"></div>
+        </div>
+        <div class="myContent">
+            <div class="channelContents">
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+                <div class="videos"></div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>
