@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offensive Security Footer</title>
+    <style>
+        body{
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .footer{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: minmax(100px,auto);
+            color: rgb(255, 255, 255);
+             background-color: rgba(0, 0, 0, 1);
+        }
+        .footerSection{
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 1fr;
+            border-radius: 5px;
+            padding: 10px;
+            transition-duration: 0.8s;
+            transition-property: background-color,color;
+
+        }
+
+
+        .footerSection:hover{
+            background-color: rgba(90,90, 90, 0.9);
+            
+        }
+
+        
+        .footSectionDetails{
+            margin-top: 5px;
+            transition-property: color,font-size,background-color;
+            transition-duration: 1s;
+        }
+
+        .footSectionDetails:hover{
+            color: rgba(250, 250, 250, 1);
+            background-color: rgba(20, 20, 20, 1);
+            border-radius: 5px;
+            font-size: 1.1em;
+
+        }
+        .footSectionHeader{
+            text-transform: capitalize;
+           align-items: flex-start;
+           font-size: 1.5em;
+            font-weight: bold;
+        }
+        .social-media{
+            display: grid;
+            grid-template-columns: 1fr;
+            height: 50px;
+            width: 100vw;
+            background-color: rgba(20, 20, 20, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="footer">
+        <div class="footerSection">
+            <span class="footSectionHeader">Ready to Enroll?</span>
+            <span class="footSectionDetails">Register for a course</span>
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">Courses</span>
+            <span class="footSectionDetails">Penetration Testing with  Kali Linux(PWK)</span>
+            <span class="footSectionDetails">Advanced Web Attacks and Exploitation (AWAE)</span>
+            <span class="footSectionDetails">Cracking the Perimater (CTP)</span>
+            <span class="footSectionDetails">Advanced Windows Exploitation</span>
+            <span class="footSectionDetails">Offensive Security Wireless Attacks(WiFu)</span>
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">Certifications</span>
+            <span class="footSectionDetails">OSWE Web Expert</span>
+            <span class="footSectionDetails">OSCP Certified Professional</span>
+            <span class="footSectionDetails">OSCE Certified Expert</span>
+            <span class="footSectionDetails">OSWP Wireless Professional </span>
+            <span class="footSectionDetails">OSEE Exploitation Expert</span>
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">Security Services</span>
+            <span class="footSectionDetails">OffSec for Orgs</span>
+            <span class="footSectionDetails">Proving Grounds (hosted Labs)</span>
+            <span class="footSectionDetails">Penetration Testing Services</span>
+            <span class="footSectionDetails">Advanced Attack Simulation </span>
+            <span class="footSectionDetails">Application security Assessement</span>
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">About  OffSec</span>
+            <span class="footSectionDetails">Why OffSec</span>
+            <span class="footSectionDetails">Leadrership Team</span>
+            <span class="footSectionDetails">Our Core Values</span>
+            <span class="footSectionDetails">Try Harder Ethos</span>
+            <span class="footSectionDetails">Blog</span>
+            <span class="footSectionDetails">Bug Bounty Program</span>
+            <span class="footSectionDetails">Contact Us</span>
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">Open Source Tools</span>
+            <span class="footSectionDetails">Kali Linux</span>
+            <span class="footSectionDetails">Kali NetHunter</span>
+            <span class="footSectionDetails">Exploit Database</span>
+            <span class="footSectionDetails">Google Hacking Database</span>
+            <span class="footSectionDetails">Metasploit Unleashed</span>
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">Downloads</span>
+            <span class="footSectionDetails">Kali Linux Virtual Machines</span>
+            <span class="footSectionDetails">Kali Liniux ARM Images</span>
+            <span class="footSectionDetails">Kali Linux NetHunter Images</span>
+            
+        </div>
+        <div class="footerSection">
+            <span class="footSectionHeader">Resources</span>
+            <span class="footSectionDetails">Pricing</span>
+            <span class="footSectionDetails">FAQ</span>
+            <span class="footSectionDetails">Careers</span>
+            <span class="footSectionDetails">Join Our Email List</span>
+            <span class="footSectionDetails">Official OffSec Swag</span>
+        </div>
+
+    </div>
+</body>
+</html>
